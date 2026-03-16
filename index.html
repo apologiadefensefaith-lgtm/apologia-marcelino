@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apologia Marcelino | الدفاع عن الإيمان</title>
+    <style>
+        :root {
+            --primary: #C09E3B; /* ذهبي ملكي هادئ */
+            --secondary: #1A2C49; /* كحلي داكن */
+            --accent: #B01B1B; /* أحمر داكن كنسي */
+            --bg-color: #F9F6F0; /* لون خلفية فاتح هادئ (كريمي) */
+            --card-bg: #FFFFFF; /* خلفية كرت أبيض سادة */
+            --text-color: #333333; /* لون نص داكن */
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif; /* خط وقور كلاسيكي */
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            text-align: right;
+            overflow-x: hidden;
+        }
+
+        /* الهيدر وقور سادة */
+        header {
+            background-color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 2px solid #E0E0E0;
+            position: relative;
+        }
+
+        .header-logo {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h1 {
+            color: var(--secondary);
+            font-size: 2.8rem;
+            margin: 10px 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* شريط زخرفي ذهبي دقيق */
+        .gold-line {
+            height: 10px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            margin-top: 30px;
+        }
+
+        /* التنقل */
+        nav {
+            background: white;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #E0E0E0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            color: var(--secondary);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--primary); }
+
+        /* المحتوى */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        section h2 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        /* شبكة الكروت بجانب بعض */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* كروت أصغر وبجانب بعض */
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #E0E0E0;
+            border-radius: 6px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: right;
+            position: relative;
+        }
+
+        .card::before { /* زخرفة بسيطة ذهبية على الكرت */
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: var(--secondary);
+            margin-top: 0;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #E0E0E0;
+            padding-bottom: 8px;
+        }
+
+        .content-body {
+            white-space: pre-line; /* يحافظ على ترتيب السطور */
+            color: var(--text-color);
+            font-size: 1rem;
+            height: 150px; /* تحديد ارتفاع مبدئي لإظهار جزء من المقال */
+            overflow: hidden; /* إخفاء الباقي */
+            position: relative;
+        }
+
+        /* تأثير التلاشي أسفل الكرت */
+        .content-body::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(transparent, var(--card-bg));
+        }
+
+        .card .signature {
+            display: block;
+            margin-top: 15px;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 0.9rem;
+            border-top: 1px dashed #E0E0E0;
+            padding-top: 5px;
+            text-align: left;
+        }
+
+        /* تواصل معنا */
+        #contact {
+            text-align: center;
+        }
+
+        .contact-info {
+            display: inline-block;
+            text-align: right;
+            border-right: 4px solid var(--accent);
+            padding: 20px 30px;
+            background-color: var(--card-bg);
+            border-radius: 6px;
+            border: 1px solid #E0E0E0;
+        }
+
+        .contact-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .contact-link:hover { text-decoration: underline; }
+
+        /* الفوتر هادئ سادة */
+        footer {
+            background-color: #222;
+            text-align: center;
+            padding: 40px;
+            font-size: 1rem;
+            color: #AAA;
+            border-top: 2px solid var(--primary);
+        }
+
+        .footer-logo {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="header-logo">✙</span>
+        <h1>Apologia Marcelino</h1>
+        <div class="subtitle">الدفاع عن الإيمان المسيحي والرد على الشبهات</div>
+        <Gold-Line></Gold-Line>
+    </header>
+
+    <nav>
+        <a href="#welcome">الرئيسية</a>
+        <a href="#responses">الردود</a>
+        <a href="#articles">المقالات</a>
+        <a href="#contact">تواصل معنا</a>
+    </nav>
+
+    <div class="container">
+        
+        <section id="welcome">
+            <div class="card" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
+                <h3>مرحباً بك</h3>
+                <p>هذا الموقع مخصص للدفاع عن الإيمان المسيحي وتقديم ردود عقلية ولاهوتية على الشبهات حول الكتاب المقدس والإيمان المسيحي، بروح الكنيسة الأرثوذكسية العريقة.</p>
+            </div>
+        </section>
+
+        <section id="responses">
+            <h2>الرد على الشبهات</h2>
+            <div class="article-grid">
+                
+                <div class="card">
+                    <h3>هل ذكر لعن المسيح ونسبه يعبر عن اهانة؟</h3>
+                    <div class="content-body">
+                        بسم الله القوي - سلام المسيح
+                        فلنتذكر القصة: عندما أخطأ آدم وحواء أمام الله تورثت الخطيئة.. كان يجب أن يفدي جميع الناس.
+                        عندما جاء ضرب أروع أمثال الطاعة، ولد في مذود بقر، وعند الصلب كان يجب أن يتحمل الآلام واللعنة فقط لأجلنا.
+                        لكنه قام من الأموات وصار ملك المجد.
+                        أما عن اعتباره من نسل الخطيئة (مت ١) مثل ثامار (تك ٣٨) فهي علامة على تحويل الخطيئة إلى خلاص، كما قال: "لم أدعُ أبراراً بل خطاة إلى التوبة".
+                        رداً على معاذ عليان.
+                    </div>
+                    <span class="signature">ابولوجيا-apologia</span>
+                </div>
+
+                <div class="card">
+                    <h3>هل الكتاب المقدس اتحرف؟</h3>
+                    <div class="content-body">
+                        باسم الله القوي - سلام المسيح.
+                        أنواع التحريف: التحريف اللفظي والتحريف بالمعنى، وغالباً بيتم الكلام عن التحريف اللفظي.
+                        المخطوطات: ٥٨٠٠ مخطوطة للعهد الجديد و٢٠ ألف مخطوطة للعهد القديم. لو كان في حاجة في مخطوطة غلط هتبان أنها عكس باقي المخطوطات والمفاجأة إن مفيش اختلاف بالمعنى والاختلافات النادرة بتبقى هجائية.
+                        مخطوطات قمران البحر الميت (١٩٤٧م): ترجع إلى ٢٠٠ سنة قبل المسيح، وبمقارنتها بالنص الموجود مفيش اختلاف غير في الهجاء.
+                        متخليش حد يضحك عليك ويقولك كتابك محرف.
+                    </div>
+                    <span class="signature">ابولوجيا-apologia</span>
+                </div>
+
+                <div class="card">
+                    <h3>تفنيد شبهات: إلهي إلهي و قال الرب لربي</h3>
+                    <div class="content-body">
+                        قول المسيح "إلهي إلهي لماذا تركتني" كان لسببين:
+                        ١. الجملة هي بداية لمزمور وتذكير بالنبوات التي حدثت.
+                        ٢. في عادة اليهود رئيس الكهنة يبدأ الجملة الأولى ويكمل المصلون، وهذا يدل على كهنوت المسيح بل رئاسة الكهنوت.
+
+                        أما شبهة "قال الرب لربي": الرب (الآب) لربي (الابن) تدل على المساواة بين جوهري الآب والابن. ورب تعني أيضاً سيدي، وهذا إعلان سيادة المسيح وأنه إله من نسل داود بالجسد. الجلوس عن اليمين يعني السلطان والمجد.
+                        رداً على معاذ عليان.
+                    </div>
+                    <span class="signature">ابولوجيا-apologia</span>
