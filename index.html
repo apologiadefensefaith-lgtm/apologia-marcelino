@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>موقع مارسلينو الدفاعي - Apologia Marcelino</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Aref+Ruqaa:wght@700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+:root {
+    --primary-red: #800000;
+    --gold: #d4af37;
+    --light-bg: #fdfaf5;
+    --text-dark: #2c3e50;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: white;
+    border-bottom: 4px solid var(--primary-red);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.titles {
+    text-align: center;
+}
+
+.titles h1 {
+    font-family: 'Aref Ruqaa', serif;
+    color: var(--primary-red);
+    margin: 0;
+    font-size: 2.8em;
+}
+
+.titles h2 {
+    font-family: 'Cairo', sans-serif;
+    color: var(--text-dark);
+    margin: 0;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.logo-img {
+    width: 60px;
+    height: auto;
+}
+
+nav {
+    background-color: var(--primary-red);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+nav a {
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+nav a:hover {
+    background-color: var(--gold);
+    color: var(--primary-red);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    display: none;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    animation: fadeIn 0.5s;
+}
+
+section:target { display: block; }
+#home { display: block; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h3 {
+    color: var(--primary-red);
+    border-right: 5px solid var(--gold);
+    padding-right: 15px;
+    font-family: 'Amiri', serif;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.reply-box {
+    background: #f4f7f6;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-top: 3px solid var(--primary-red);
+}
+
+.reply-box h4 { color: var(--primary-red); margin-top: 0; }
+
+footer {
+    background: var(--primary-red);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-verse {
+    font-family: 'Amiri', serif;
+    font-size: 1.5em;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    nav { flex-wrap: wrap; }
+    .titles h1 { font-size: 2em; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="titles">
+            <h1>موقع مارسلينو الدفاعي</h1>
+            <h2>Apologia – ابولوجيا</h2>
+        </div>
+        <!-- ضع صورة اللوجو هنا -->
+        <img src="logo.png" alt="مار مرقس – ابولوجيا" class="logo-img">
+    </div>
+</header>
+
+<nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#refutations">الرد على الشبهات</a>
+    <a href="#contact">تواصل معنا</a>
+</nav>
+
+<div class="container">
+
+<section id="home">
+    <h3>الرئيسية</h3>
+    <p style="font-size: 1.3em; text-align: center;">
+        مرحباً بكم في <strong>موقع مارسلينو الدفاعي (Apologia Marcelino)</strong>.<br>
+        منصة متخصصة في الدفاع عن الإيمان الأرثوذكسي، مع أخبار الكنيسة، الألحان، الطقوس، وأي معلومة عن الطائفة القبطية الأرثوذكسية.
+    </p>
+</section>
+
+<section id="refutations">
+    <h3>الرد على الشبهات</h3>
+    <!-- هنا تحط الشبهات بالنص اللي هتكتبه حرفيًا -->
+    <div class="reply-box">
+        <h4>الشبهة الأولى</h4>
+        <p>
+            <!-- شبهة بولس والرسائل الضائعه
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+هل ذكر العهد الجديد رسائل بولس
+نعم 
+كتبت اليكم الا تخالطوا الزناة (١كو٥:٩)
+الله؟ يعني بطرس كتب لكورنثوس رسالة قبل الاولى
+اه
+طب الرسائل كانت وحي؟
+لا،كانت رعوية 
+لو كانت وحي كانت اتحطت
+ليه متحفظتش؟
+رسائل رعوية موقتة
+مش للكنيسة كاملة (لكن التانيين كانوا ممكن يكونوا للكنيسة كاملة)
+لم تعتبرها الكنيسة وحي
+اضطهاد بولس وسجنه
+الكنيسة بتهتم جدا باسفار الوحي 
+طب كتاب رؤية بطرس 
+كتب بعد بطرس الرسول 
+أدبي خيالي اكتر من كونه رساله رسولية
+ابولوجيا-Apologia -->
+        </p>
+    </div>
+    <div class="reply-box">
+        <h4>الشبهة الثانية</h4>
+        <p>
+            <!-- شرح قال الرب لربي
+ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+شبهة قال الرب لربي شبهة يتمسك فيها ناس ناقدين للمسيحية عشان يقولوا أن المسيحية ش/ر/ك
+مع انها تشرح طبيعة المسيح
+الرب المقصود بها الاب 
+لربي يقصد الابن 
+تدل على المساواة بين جوهري الاب والابن 
+وايضا رب ليست تعني الله فقط 
+بل تعني سيدي 
+لذلك قال تلك الآية 
+اعلان سيادة المسيح 
+اي أنه حفيده ومن نسله وايضا إلهه 
+وقول الجلوس عن اليمين يعني السلطان والمجد مثلما 
+ حدث مع السيدة العذراء مريم 
+ردا على معاذ عليان 
+ابولوجيا-apologia --> <!-- يمكن تكرار reply-box لأي عدد من الشبهات -->
+</section>
+
+<section id="contact">
+    <h3>تواصل معنا</h3>
+    <div style="text-align: center;">
+        <p>نرحب بأسئلتكم واستفساراتكم عبر الوسائل التالية:</p>
+        <p><strong>البريد الإلكتروني:</strong> apologiadefensefaith@gmail.com</p>
+        <p><strong>فيسبوك:</strong> <a href="https://www.facebook.com/share/1b7i3E2yq1/" target="_blank">صفحة مارسلينو الدفاعية</a></p>
+    </div>
+</section>
+
+</div>
+
+<footer>
+    <div class="footer-verse">مستعدون لمحاولة كل من يسألكم عن سبب الرجاء الذي فيكم</div>
+    <p>جميع الحقوق محفوظة لموقع مارسلينو الدفاعي &copy; 2026</p>
+    <p>Apologia Marcelino</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+async function askAI(question) {
+    const response = await axios.post('https://api.openai.com/v1/chat/completions', {
+        model: "gpt-3.5-turbo",
+        messages: [{role: "user", content: question}]
+    }, {
+        headers: {
+            "Authorization": "Bearer YOUR_OPENAI_API_KEY",
+            "Content-Type": "application/json"
+        }
+    });
+
+    return response.data.choices[0].message.content;
+}
+</script>
+
+</body>
+</html>
